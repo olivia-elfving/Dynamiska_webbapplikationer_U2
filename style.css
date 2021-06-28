@@ -1,0 +1,195 @@
+@charset "UTF-8";
+
+html {
+    font-size: 16px;
+}
+
+html, body, nav, header, main, aside, footer, article, section, div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1b3242;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    /*display: grid;
+    grid-template-columns: 100px minmax(300px,650px) 100px auto;
+    grid-template-rows: 130px 100px auto 70px;
+    grid-template-areas: 
+    "header header header   header"
+    ".      nav     nav     ."
+    ".      main    main   aside"
+    "footer footer  footer  footer"*/
+}
+
+header {
+    grid-area: header;
+    background-color: #099797;
+    padding: 10px 30px;
+    color: #eee;
+    text-align: center;
+}
+
+header p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+}
+
+nav {
+   /* background-color: blueviolet;*/
+    padding: 10px 30px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    transition: all 0.2s;
+}
+
+nav a {
+    display: inline-block;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 3px #150029;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    color: black;
+}
+
+nav a:link, nav a:active {
+    background-color: #fc736c;
+}
+
+nav a:hover, nav a:active {
+    box-shadow: 1px 1px 10px 3px #150029;
+    transform: translate(2px, 2px);
+}
+
+main {
+    background-color: #eed4ad;
+    padding: 10px 30px;
+}
+
+main a:link, main a:active {
+    color: #099797;
+}
+
+img {
+    float: left;
+    padding-right: 20px;
+}
+
+article {
+    overflow: auto;
+}
+
+#story h2 {
+    clear: both;
+}
+
+#story img {
+    padding-bottom: 30px;
+}
+
+#products img {
+    max-height: 400px;
+}
+
+aside {
+    background-color: #37c8b9de;
+    /*#20c7c6*/
+    padding: 10px 30px;   
+}
+
+aside ul, aside ul ul  {
+    list-style: none;
+}
+
+
+/*table, th, td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}*/
+
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #099797;
+    color: whitesmoke;
+}
+
+tr:nth-child(odd) {
+    background-color: #37c8b9;
+}
+
+tr:nth-child(even) {
+    background-color:#37c8b9a2;
+    
+}
+
+footer {
+    grid-area: footer;
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+    font-style: italic;
+    color: #eee;
+} 
+
+footer a:link, footer a:active {
+    color: #fc736c;
+}
+
+/* -----Media queries----- */
+
+ /*Ska se bra ut mellan 640px - 1280px*/
+@media screen and (max-width: 1100px) {
+    #story img {
+        padding-bottom: 0px;
+    }
+
+    body {
+        max-width: 850px;
+    }
+}
+
+@media screen and (max-width: 870px) { 
+    img {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+    
+    body {
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        max-width: 500px;
+    }
+}
